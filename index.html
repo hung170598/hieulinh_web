@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&tabs=vanilla-javascript -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-dark" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Quickstart: Build your first static web app">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal">
+			<meta property="og:description" content="Learn to deploy a static site to Azure Static Web Apps with the Azure portal.">
+
+	<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png">
+
+	<meta property="og:image:alt" content="Microsoft Learn">
+
+	<meta name="twitter:card" content="summary_large_image">
+
+	<meta name="twitter:site" content="@MicrosoftLearn">
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="adobe-target" content="true">
+<meta name="author" content="craigshoemaker">
+<meta name="breadcrumb_path" content="/azure/bread/toc.json">
+<meta name="depot_name" content="Azure.azure-documents">
+<meta name="description" content="Learn to deploy a static site to Azure Static Web Apps with the Azure portal.">
+<meta name="document_id" content="63230b97-2269-3fed-7fca-882bb380c5f6">
+<meta name="document_version_independent_id" content="feb2708e-5cea-4ad8-eaaa-f3061e18c11a">
+<meta name="git_commit_id" content="38180b2b24ceb3c9b445cc23915aa70f669ad6d9">
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/38180b2b24ceb3c9b445cc23915aa70f669ad6d9/articles/static-web-apps/get-started-portal.md">
+<meta name="learn_banner_products" content="azure">
+<meta name="locale" content="en-us">
+<meta name="ms.author" content="cshoe">
+<meta name="ms.date" content="09/19/2022">
+<meta name="ms.service" content="static-web-apps">
+<meta name="ms.suite" content="office">
+<meta name="ms.topic" content="quickstart">
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/static-web-apps/get-started-portal.md">
+<meta name="page_type" content="conceptual">
+<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/Azure.azure-documents/{branchName}{pdfName}">
+<meta name="recommendation_types" content="Training">
+<meta name="recommendation_types" content="Certification">
+<meta name="recommendations" content="true">
+<meta name="schema" content="Conceptual">
+<meta name="services" content="static-web-apps">
+<meta name="site_name" content="Docs">
+<meta name="toc_rel" content="toc.json">
+<meta name="uhfHeaderId" content="azure">
+<meta name="updated_at" content="2023-08-02 09:51 PM">
+<meta name="word_count" content="1117">
+<meta name="zone_pivot_groups" content="devops-or-github">
+
+
+	<meta name="persistent_id" content="470a9032-174c-2995-892a-2a2b4dbe9325">
+	
+
+
+	<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/59994811-8878-4f3c-a7cb-69d7159ff51d" data-source="generated">
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/9bdc1705-9b40-49d6-8377-caa0b71fda66" data-source="generated">
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d" data-source="generated">
+
+	
+
+	<meta name="scope" content="Azure">
+	<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/static-web-apps/get-started-portal.md">
+<link href="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal" rel="canonical">
+	<title>Quickstart: Build your first static web app | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="./index_files/a2af0641.site-ltr.css">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'vi-vn',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: 'azure',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			contentWellNotification: '',
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/azure-docs',
+			feedbackProductUrl: 'https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4',
+			extendBreadcrumb: false,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "craigshoemaker", url: "https://github.com/craigshoemaker" },
+						{ name: "v-regandowner", url: "https://github.com/v-regandowner" },
+						{ name: "eloekset", url: "https://github.com/eloekset" },
+						{ name: "chcomley", url: "https://github.com/chcomley" },
+						{ name: "kengaderdus", url: "https://github.com/kengaderdus" },
+						{ name: "alexwolfmsft", url: "https://github.com/alexwolfmsft" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="./index_files/wcp-consent.js.tải xuống"></script>
+	<script src="./index_files/ms.jsll-3.min.js.tải xuống"></script>
+
+	<script src="./index_files/67a45209.deprecation.js.tải xuống"></script>
+		<link rel="preconnect" href="https://mscom.demdex.net/" crossorigin="">
+		<link rel="dns-prefetch" href="https://target.microsoft.com/">
+		<link rel="dns-prefetch" href="https://microsoftmscompoc.tt.omtrdc.net/">
+		<link rel="preload" as="script" href="./index_files/at.js.tải xuống" integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu" crossorigin="anonymous" id="adobe-target-script" type="application/javascript">
+		<script src="./index_files/1563de0d.index-docs.js.tải xuống"></script><style></style>
+<style>
+		[data-pivot]:not([data-pivot~='azure-devops']) {
+			display: none !important;
+		}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"Learn","position":1,"@type":"ListItem","item":"https://learn.microsoft.com/vi-vn/"},{"name":"Azure","position":2,"@type":"ListItem","item":"https://learn.microsoft.com/vi-vn/azure/"},{"name":"Static Web Apps","position":3,"@type":"ListItem","item":"https://learn.microsoft.com/vi-vn/azure/static-web-apps/"}]}</script></head>
+
+<body lang="vi-vn" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Chuyển đến nội dung chính</a>
+
+		<div hidden="" id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;" hidden="">
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">Trình duyệt này không còn được hỗ trợ nữa.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Hãy nâng cấp lên Microsoft Edge để tận dụng các tính năng mới nhất, bản cập nhật bảo mật và hỗ trợ kỹ thuật.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881" style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Tải xuống Microsoft Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge" style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+Xem thêm thông tin về Internet Explorer và Microsoft Edge					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"><!----> <div class="nav-bar" data-test-id="primary-nav-bar" data-bi-name="L1-header"><!----> <div class="nav-bar-brand display-flex align-items-center padding-none margin-left-xs margin-left-none-tablet margin-right-xxs">
+		
+					<a class="nav-bar-button padding-inline-none" itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft" data-bi-name="microsoft-logo-link">
+						 <div class="nav-bar-logo" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope">
+				
+		<svg xmlns="http://www.w3.org/2000/svg" width="108" height="23" viewBox="72 72 337 74" preserveAspectRatio="xMidYMin slice">
+			<g data-name="MS-symbol">
+				<clippath>
+					<path transform="matrix(1 0 0 -1 0 216)" d="M0 216h482V0H0z"></path>
+				</clippath>
+				<g clip-path="url(#a)">
+					<path d="M394.942 104.59h-10.858v25.003h-7.38V104.59h-5.182v-5.965h5.182v-4.308c0-3.254 1.06-5.92 3.178-7.998 2.12-2.079 4.835-3.118 8.15-3.118.882 0 1.666.045 2.35.135a9.37 9.37 0 011.806.407v6.296c-.24-.14-.663-.31-1.265-.512-.603-.2-1.296-.3-2.078-.3-1.528 0-2.702.476-3.526 1.43-.824.954-1.235 2.365-1.235 4.232v3.736h10.858v-6.959l7.321-2.229v9.188h7.381v5.965h-7.38v14.49c0 1.91.345 3.254 1.038 4.037.693.783 1.782 1.175 3.27 1.175.42 0 .927-.1 1.52-.3a7.178 7.178 0 001.552-.724v6.025c-.463.261-1.23.502-2.305.723a15.742 15.742 0 01-3.178.331c-3.073 0-5.378-.817-6.914-2.455-1.537-1.637-2.305-4.102-2.305-7.396zm-48.407 9.73c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.45-2.545-6.04-2.545-2.67 0-4.745.888-6.22 2.666-1.477 1.777-2.215 4.313-2.215 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.892-2.993 6.91-4.489 12.05-4.489 4.841 0 8.621 1.441 11.343 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.447 9.018-4.338 11.99-2.892 2.973-6.829 4.458-11.81 4.458-4.8 0-8.61-1.41-11.432-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-16.417-7.802c0 1.045.331 1.863.994 2.456.662.592 2.128 1.34 4.398 2.243 2.912 1.166 4.956 2.476 6.131 3.932 1.175 1.456 1.762 3.22 1.762 5.287 0 2.912-1.12 5.252-3.359 7.02-2.24 1.767-5.267 2.65-9.083 2.65-1.285 0-2.706-.155-4.263-.467-1.556-.31-2.877-.707-3.96-1.19v-7.169a17.945 17.945 0 004.277 2.198c1.526.543 2.911.814 4.157.814 1.647 0 2.862-.23 3.645-.693.784-.46 1.175-1.235 1.175-2.319 0-1.005-.406-1.853-1.22-2.546-.813-.693-2.355-1.492-4.624-2.395-2.69-1.125-4.599-2.39-5.724-3.796-1.125-1.406-1.687-3.193-1.687-5.362 0-2.792 1.11-5.086 3.33-6.884 2.217-1.797 5.095-2.696 8.63-2.696 1.084 0 2.3.12 3.645.361 1.346.242 2.47.553 3.374.934v6.93c-.964-.644-2.089-1.195-3.374-1.658-1.286-.462-2.56-.693-3.826-.693-1.386 0-2.465.271-3.238.813-.774.543-1.16 1.286-1.16 2.23m-35.066 7.562c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.449-2.545-6.039-2.545-2.672 0-4.745.888-6.222 2.666-1.476 1.777-2.214 4.313-2.214 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.893-2.993 6.91-4.489 12.051-4.489 4.84 0 8.621 1.441 11.342 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.446 9.018-4.338 11.99-2.892 2.973-6.828 4.458-11.809 4.458-4.8 0-8.61-1.41-11.433-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-3.136-16.448c.582 0 1.105.041 1.567.121.462.08.853.18 1.175.301v7.38c-.382-.28-.939-.546-1.672-.798-.733-.25-1.622-.376-2.666-.376-1.788 0-3.299.753-4.534 2.26-1.235 1.505-1.853 3.825-1.853 6.958v15.635h-7.29V98.624h7.29v4.88h.12c.663-1.687 1.667-3.007 3.013-3.96 1.346-.954 2.962-1.432 4.85-1.432m-27.956 26.18c1.084 0 2.28-.25 3.585-.754a15.06 15.06 0 003.615-1.988v6.778c-1.165.663-2.485 1.165-3.962 1.506-1.475.342-3.098.512-4.865.512-4.559 0-8.265-1.44-11.116-4.323-2.852-2.88-4.278-6.562-4.278-11.04 0-4.98 1.456-9.083 4.37-12.307 2.91-3.224 7.037-4.835 12.38-4.835 1.366 0 2.746.176 4.143.527 1.395.352 2.504.758 3.328 1.22v6.99c-1.125-.824-2.274-1.462-3.45-1.914a9.966 9.966 0 00-3.599-.678c-2.872 0-5.192.934-6.959 2.802-1.768 1.868-2.652 4.388-2.652 7.562 0 3.132.85 5.573 2.546 7.32 1.697 1.748 4.002 2.621 6.914 2.621m-22.112 5.302h-7.29V98.624h7.29zm-8.044-39.916c0-1.205.437-2.214 1.311-3.028.874-.813 1.913-1.22 3.118-1.22 1.285 0 2.35.417 3.193 1.25.844.834 1.266 1.833 1.266 2.998 0 1.185-.432 2.18-1.296 2.982-.864.804-1.918 1.205-3.163 1.205-1.246 0-2.295-.406-3.148-1.219-.854-.815-1.28-1.803-1.28-2.968m-6.274-3.284v43.2h-7.5v-33.86h-.12l-13.408 33.86h-4.97l-13.738-33.86h-.09v33.86h-6.929v-43.2h10.755l12.412 32.024h.18l13.105-32.024z" class="fill-current-color fill-link-text-forced-colors color-text-subtle"></path>
+					<path d="M106.214 106.214H71.996V71.996h34.218z" fill="#f25022"></path>
+					<path d="M143.993 106.214h-34.218V71.996h34.218z" fill="#7fba00"></path>
+					<path d="M106.214 143.993H71.996v-34.218h34.218z" fill="#00a4ef"></path>
+					<path d="M143.993 143.993h-34.218v-34.218h34.218z" fill="#ffb900"></path>
+				</g>
+			</g>
+		</svg>
+	
+		  </div>
+					</a>
+			  
+	</div> 
+				
+		<div class="nav-bar-item is-hidden-tablet">
+			<div class="nav-bar-menu">
+				<button class="nav-bar-button is-title" data-test-id="mobile-nav-expander" title="Điều hướng chung" aria-expanded="false">
+					<span class="nav-bar-menu-title"><!---->Tài liệu<!----></span>
+					<div class="nav-bar-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="nav-bar-burger-label"><!---->Điều hướng chung<!----></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	
+				
+		<nav class="nav-bar-nav" role="navigation" aria-label="Chung">
+			<ul class="nav-bar-nav-list">
+				
+		<li class="nav-bar-item is-category">
+			<a data-test-id="header-link-category" class="nav-bar-button is-title has-hover-underline" itemprop="url" data-bi-name="L1-category-link" href="https://learn.microsoft.com/vi-vn/">
+				<span><!---->Learn<!----></span>
+			</a>
+		</li>
+	
+				<!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-tài-liệu" class=" nav-bar-button has-hover-underline is-active" href="https://learn.microsoft.com/vi-vn/docs/" aria-current="true" data-bi-name="L1-navigation-link">
+						<span><!---->Tài liệu<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-đào-tạo" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/training/" data-bi-name="L1-navigation-link">
+						<span><!---->Đào tạo<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-chứng-chỉ" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/certifications/" data-bi-name="L1-navigation-link">
+						<span><!---->Chứng chỉ<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-q&amp;a" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/answers/" data-bi-name="L1-navigation-link">
+						<span><!---->Q&amp;A<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-mẫu-mã" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/samples/browse/" data-bi-name="L1-navigation-link">
+						<span><!---->Mẫu mã<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-bài-đánh-giá" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/assessments/" data-bi-name="L1-navigation-link">
+						<span><!---->Bài đánh giá<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-chương-trình" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/shows/" data-bi-name="L1-navigation-link">
+						<span><!---->Chương trình<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-sự-kiện" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/vi-vn/events/" data-bi-name="L1-navigation-link">
+						<span><!---->Sự kiện<!----></span>
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-124" data-bi-name="L1-navigation-menu" value="undefined">
+			<span><!---->Thêm<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-124" aria-label="Thêm">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button is-active" href="https://learn.microsoft.com/vi-vn/docs/" aria-current="true" data-bi-name="L1-navigation-link">
+						Tài liệu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/training/" data-bi-name="L1-navigation-link">
+						Đào tạo
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/certifications/" data-bi-name="L1-navigation-link">
+						Chứng chỉ
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/answers/" data-bi-name="L1-navigation-link">
+						Q&amp;A
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/samples/browse/" data-bi-name="L1-navigation-link">
+						Mẫu mã
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/assessments/" data-bi-name="L1-navigation-link">
+						Bài đánh giá
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/shows/" data-bi-name="L1-navigation-link">
+						Chương trình
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/vi-vn/events/" data-bi-name="L1-navigation-link">
+						Sự kiện
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+				<span class="nav-bar-spacer"></span>
+				
+		<div class="nav-bar-search " id="ax-125" hidden="">
+			
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form" aria-label="Tìm kiếm" action="https://learn.microsoft.com/vi-vn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!---->
+			<div class="field-body control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input" data-test-id="site-search-input" class="autocomplete-input input input-sm
+						
+						" type="search" name="terms" aria-expanded="false" aria-owns="ax-126-listbox" aria-controls="ax-126-listbox" aria-activedescendant="" aria-label="Tìm kiếm" aria-describedby="ms--site-search-input-description" placeholder="Tìm kiếm" pattern=".*">
+
+				<span aria-hidden="true" class="icon is-small is-left" hidden="">
+					<span class="has-text-primary docon docon-undefined"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-search-input-description">
+					Nội dung đề xuất sẽ lọc khi bạn nhập
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-126-listbox" data-test-id="site-search-input-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Đề xuất" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="Azure">
+			
+			
+			<input name="fromNavSearch" hidden="" value="true">
+		</form>
+	
+		</div>
+		
+					<div class="nav-bar-search">
+						<!-- hidden when the width drops to tablet -->
+						
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form-desktop" aria-label="Tìm kiếm" action="https://learn.microsoft.com/vi-vn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!---->
+			<div class="field-body control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input-desktop" data-test-id="site-search-input-desktop" class="autocomplete-input input input-sm
+						control has-icons-left
+						" type="search" name="terms" aria-expanded="false" aria-owns="ax-127-listbox" aria-controls="ax-127-listbox" aria-activedescendant="" aria-label="Tìm kiếm" aria-describedby="ms--site-search-input-desktop-description" placeholder="Tìm kiếm" pattern=".*">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-search"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-search-input-desktop-description">
+					Nội dung đề xuất sẽ lọc khi bạn nhập
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-127-listbox" data-test-id="site-search-input-desktop-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Đề xuất" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="Azure">
+			
+			
+			<input name="fromNavSearch" hidden="" value="true">
+		</form>
+	
+					</div>
+			  
+		<div class="nav-bar-search " hidden="">
+			<div class="nav-bar-search-form-expander">
+				<button id="form-expander" data-test-id="form-expander" class="nav-bar-button has-hover-underline " title="Tìm kiếm" aria-expanded="false" aria-controls="ax-125">
+					
+		<span class="is-visually-hidden-mobile"><!---->Tìm kiếm<!----></span>
+		<span class="icon margin-left-xxs" aria-hidden="true">
+			<span class="docon docon-search"></span>
+		</span>
+	
+				</button>
+			</div>
+		</div>
+	
+				
+		<div class="nav-bar-profile">
+			
+		<a class="docs-sign-in auth-status-determined not-authenticated" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#"> Đăng nhập </a>
+	 
+		<div class="dropdown has-caret auth-status-determined authenticated">
+			<button class="dropdown-trigger button-reset" aria-controls="user-menu" aria-expanded="false" data-bi-name="L1-user-menu" aria-label="Tài khoản của bạn">
+				<figure class="image is-36x36">
+					<img class="has-body-background-medium border-radius-rounded" alt="" data-profile-property="avatarThumbnailUrl">
+				</figure>
+			</button>
+			<div class="dropdown-menu box justify-content-flex-start has-body-background" id="user-menu" data-bi-name="user-menu" role="menu">
+				<div class="media is-user-dir">
+					<div class="media-left">
+						<figure class="image is-48x48" aria-hidden="true">
+							<img class="has-body-background-medium border-radius-rounded" aria-labelledby="displayName" alt="" data-profile-property="avatarUrl">
+						</figure>
+					</div>
+					<div class="media-content">
+						<h2 class="title font-size-lg">
+							<span id="displayName" class="is-inline-truncated has-max-width-200" data-profile-property="displayName"></span>
+						</h2>
+						<p class="subtitle font-size-sm margin-bottom-none">
+							<span class="is-inline-truncated has-max-width-200" data-profile-property="upn"></span>
+						</p>
+					</div>
+				</div>
+				<ul class="padding-top-xs padding-bottom-xs">
+					<li class="padding-bottom-xs">
+						<a data-profile-property="profileUrl" href="https://learn.microsoft.com/vi-vn/users/me/activity/"><!---->Hồ sơ<!----></a>
+					</li>
+					<li>
+						<a data-profile-property="settingsUrl" href="https://learn.microsoft.com/vi-vn/users/me/settings/"><!---->Cài đặt<!----></a>
+					</li>
+				</ul>
+				<div class="border-top padding-top-xs">
+					<a class="docs-sign-out" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#"><!---->Đăng xuất<!----></a>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	
+			 <!----></div> <div class="nav-bar border-top is-hidden-mobile" data-test-id="secondary-nav-bar" data-bi-name="L2-header"><!----> 
+		<a class="nav-bar-button is-title has-hover-underline" itemprop="url" data-bi-name="L2-category-link" href="https://learn.microsoft.com/vi-vn/azure/">
+			<span>
+				Azure
+				
+			</span>
+		</a>
+	 
+		
+		<nav class="nav-bar-nav" role="navigation" aria-label="Trang web">
+			<ul class="nav-bar-nav-list">
+				
+				<!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-128" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tài liệu về sản phẩm<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-128" aria-label="Tài liệu về sản phẩm">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=compute" data-bi-name="L2-navigation-link">
+						Tính toán
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=networking" data-bi-name="L2-navigation-link">
+						Mạng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=storage" data-bi-name="L2-navigation-link">
+						Thiết bị lưu trữ
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=web" data-bi-name="L2-navigation-link">
+						Web
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=mobile" data-bi-name="L2-navigation-link">
+						Di động
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=containers" data-bi-name="L2-navigation-link">
+						Bộ chứa
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=databases" data-bi-name="L2-navigation-link">
+						Cơ sở dữ liệu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/" data-bi-name="L2-navigation-link">
+						Tất cả sản phẩm
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-129" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Kiến trúc<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-129" aria-label="Kiến trúc">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/guide/" data-bi-name="L2-navigation-link">
+						Bắt đầu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/browse/" data-bi-name="L2-navigation-link">
+						Kiến trúc tham chiếu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/cloud-adoption-framework/" data-bi-name="L2-navigation-link">
+						Khuôn khổ áp dụng trên đám mây cho Azure
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/framework/" data-bi-name="L2-navigation-link">
+						Khung có kiến trúc tốt của Azure
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/patterns/" data-bi-name="L2-navigation-link">
+						Mẫu thiết kế
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/assessments/" data-bi-name="L2-navigation-link">
+						Bài đánh giá
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-130" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tìm hiểu Azure<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-130" aria-label="Tìm hiểu Azure">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/training/azure/" data-bi-name="L2-navigation-link">
+						Lộ trình học tập tự điều chỉnh tốc độ
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://go.microsoft.com/fwlink/?linkid=2012831" data-bi-name="L2-navigation-link">
+						Pluralsight
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/training/courses/browse/?products=azure" data-bi-name="L2-navigation-link">
+						Các khóa học có người hướng dẫn
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-131" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Phát triển<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-131" aria-label="Phát triển">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/python/" data-bi-name="L2-navigation-link">
+						Python
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/dotnet/azure/" data-bi-name="L2-navigation-link">
+						.NET
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/javascript/" data-bi-name="L2-navigation-link">
+						JavaScript
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/java/" data-bi-name="L2-navigation-link">
+						Java
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/go/" data-bi-name="L2-navigation-link">
+						Go
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-132" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tài nguyên<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-132" aria-label="Tài nguyên">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/pricing/" data-bi-name="L2-navigation-link">
+						Giá
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/overview/sales-number/" data-bi-name="L2-navigation-link">
+						Liên hệ với bộ phận bán hàng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/resources/videos/home/" data-bi-name="L2-navigation-link">
+						Video
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/overview/webinars/" data-bi-name="L2-navigation-link">
+						Hội thảo trực tuyến
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/updates/" data-bi-name="L2-navigation-link">
+						Cập nhật
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/resources/whitepapers/" data-bi-name="L2-navigation-link">
+						Giấy trắng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/blog/" data-bi-name="L2-navigation-link">
+						Blog
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/support/options/" data-bi-name="L2-navigation-link">
+						Hỗ trợ
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-133" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Thêm<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-133" aria-label="Thêm">
+			<!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-134" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tài liệu về sản phẩm<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-134" aria-label="Tài liệu về sản phẩm">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=compute" data-bi-name="L2-navigation-link">
+						Tính toán
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=networking" data-bi-name="L2-navigation-link">
+						Mạng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=storage" data-bi-name="L2-navigation-link">
+						Thiết bị lưu trữ
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=web" data-bi-name="L2-navigation-link">
+						Web
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=mobile" data-bi-name="L2-navigation-link">
+						Di động
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=containers" data-bi-name="L2-navigation-link">
+						Bộ chứa
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/?product=databases" data-bi-name="L2-navigation-link">
+						Cơ sở dữ liệu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/" data-bi-name="L2-navigation-link">
+						Tất cả sản phẩm
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-135" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Kiến trúc<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-135" aria-label="Kiến trúc">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/guide/" data-bi-name="L2-navigation-link">
+						Bắt đầu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/browse/" data-bi-name="L2-navigation-link">
+						Kiến trúc tham chiếu
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/cloud-adoption-framework/" data-bi-name="L2-navigation-link">
+						Khuôn khổ áp dụng trên đám mây cho Azure
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/framework/" data-bi-name="L2-navigation-link">
+						Khung có kiến trúc tốt của Azure
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/architecture/patterns/" data-bi-name="L2-navigation-link">
+						Mẫu thiết kế
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/assessments/" data-bi-name="L2-navigation-link">
+						Bài đánh giá
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-136" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tìm hiểu Azure<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-136" aria-label="Tìm hiểu Azure">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/training/azure/" data-bi-name="L2-navigation-link">
+						Lộ trình học tập tự điều chỉnh tốc độ
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://go.microsoft.com/fwlink/?linkid=2012831" data-bi-name="L2-navigation-link">
+						Pluralsight
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/training/courses/browse/?products=azure" data-bi-name="L2-navigation-link">
+						Các khóa học có người hướng dẫn
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-137" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Phát triển<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-137" aria-label="Phát triển">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/python/" data-bi-name="L2-navigation-link">
+						Python
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/dotnet/azure/" data-bi-name="L2-navigation-link">
+						.NET
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/javascript/" data-bi-name="L2-navigation-link">
+						JavaScript
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/java/" data-bi-name="L2-navigation-link">
+						Java
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/vi-vn/azure/developer/go/" data-bi-name="L2-navigation-link">
+						Go
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-138" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tài nguyên<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-138" aria-label="Tài nguyên">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/pricing/" data-bi-name="L2-navigation-link">
+						Giá
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/overview/sales-number/" data-bi-name="L2-navigation-link">
+						Liên hệ với bộ phận bán hàng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/resources/videos/home/" data-bi-name="L2-navigation-link">
+						Video
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/overview/webinars/" data-bi-name="L2-navigation-link">
+						Hội thảo trực tuyến
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/updates/" data-bi-name="L2-navigation-link">
+						Cập nhật
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/resources/whitepapers/" data-bi-name="L2-navigation-link">
+						Giấy trắng
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/blog/" data-bi-name="L2-navigation-link">
+						Blog
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://azure.microsoft.com/support/options/" data-bi-name="L2-navigation-link">
+						Hỗ trợ
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+		<span class="nav-bar-spacer"></span>
+		
+		<ol class="nav-bar-list">
+			
+		<li class="nav-bar-item has-spacing">
+			<a data-test-id="navbar-primary-cta" class="button button-sm button-primary " href="https://portal.azure.com/" data-bi-name="L2-secondary-cta">
+				Cổng thông tin
+			</a>
+		</li>
+	 
+		<li class="nav-bar-item ">
+			<a data-test-id="navbar-primary-cta" class="button button-sm button-primary button-filled" href="https://azure.microsoft.com/free/" data-bi-name="L2-primary-cta">
+				Tài khoản miễn phí
+			</a>
+		</li>
+	
+		</ol>
+	 
+	 <!----></div> <!----></header>		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button="">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Mục lục						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Thoát khỏi chế độ tập trung</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"><!---->
+			<section data-dismissable="disappearing" data-bi-name="banner" class="is-info alert is-banner">
+				<div class="uhf-container">
+					<button data-dismiss="" data-bi-name="close" type="button" class="delete position-absolute top-0 right-0 margin-xxs delete-lg">
+						<span class="visually-hidden"><!---->Bỏ qua cảnh báo<!----></span>
+					</button>
+					<div class="columns">
+						<div class="column is-12">
+							<div class="level justify-content-flex-start">
+								<div class="level-left flex-shrink-1">
+									<div class="level-item flex-shrink-1">
+										<p class="has-text-white-static disclaimer-title margin-top-xxs margin-right-xs has-line-height-reset">
+											<span class="icon">
+												<span class="docon docon-status-error-outline" aria-hidden="true"></span>
+											</span>
+											<span><!---->Nội dung này không có sẵn bằng ngôn ngữ của bạn. Đây là phiên bản tiếng Anh.<!----></span>
+										</p>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!----></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" role="navigation" aria-label="Chính" style="top: 24px; max-height: calc(100vh - 175.594px);" data-bi-name="left toc"><form action="javascript:" role="search" aria-label="Tìm kiếm" class="margin-bottom-xxs"><label class="visually-hidden" for="ax-122">Tìm kiếm</label><div class="autocomplete display-block" data-bi-name="autocomplete"><!---->
+			<div class="field-body control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-122" data-test-id="ax-122" class="autocomplete-input input input-sm
+						control has-icons-left
+						width-full" type="text" aria-expanded="false" aria-owns="ax-123-listbox" aria-controls="ax-123-listbox" aria-activedescendant="" aria-describedby="ms--ax-122-description" placeholder="Lọc theo tiêu đề" pattern=".*">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-filter-settings"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--ax-122-description">
+					Nội dung đề xuất sẽ lọc khi bạn nhập
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-123-listbox" data-test-id="ax-122-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Đề xuất" hidden="">
+				
+				
+			</ul>
+		<!----></div></form><ul class="tree table-of-contents is-vertically-scrollable flex-grow-1 flex-shrink-1" role="tree" aria-label="Mục lục" data-bi-name="tree" data-is-collapsible="true"><li role="none"><a aria-setsize="9" aria-level="1" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/">Azure Static Web Apps Documentation</a></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Overview</span></li><li class="tree-item is-expanded" aria-setsize="9" aria-level="1" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Quickstarts</span><ul class="tree-group" role="group"><li class="tree-item is-expanded" aria-setsize="1" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" id="title-3-1_1-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Build your first static web app</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="3" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/getting-started">Visual Studio Code</a></li><li role="none"><a aria-setsize="3" aria-level="3" aria-posinset="2" role="treeitem" tabindex="0" class="tree-item is-leaf has-external-link-indicator is-selected" data-bi-name="tree-leaf" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal" aria-current="page">Azure portal</a></li><li role="none"><a aria-setsize="3" aria-level="3" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-cli">Azure CLI</a></li></ul></li></ul></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Concepts</span></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="5" role="treeitem" tabindex="-1" id="title-5-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>How-to guides</span></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="6" role="treeitem" tabindex="-1" id="title-6-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Tutorials</span></li><li role="none"><a aria-setsize="9" aria-level="1" aria-posinset="7" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/vi-vn/samples/browse/?terms=static%20web%20apps">Samples</a></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="8" role="treeitem" tabindex="-1" id="title-8-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Reference</span></li><li class="tree-item" aria-setsize="9" aria-level="1" aria-posinset="9" role="treeitem" tabindex="-1" id="title-9-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Resources</span></li></ul><div class="padding-xxs padding-none-tablet border-top border-bottom-tablet"><button class="button button-sm button-clear button-block inner-focus justify-content-flex-start-tablet" data-bi-name="download-pdf" rel="nofollow"><!---->
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-dictionary-download"></span>
+			</span>
+			<span><!---->Tải xuống PDF<!----></span>
+		<!----></button></div></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="en-us" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs" hidden="">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="Tất cả các đánh dấu đường dẫn">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"><!---->
+			<nav>
+				<ol class="list-style-none">
+					<!---->
+								<li class="line-clamp-1">
+									<a class="display-block has-inner-focus padding-inline-xs padding-block-xxs border-radius font-size-sm" href="https://learn.microsoft.com/vi-vn/">
+										Learn
+									</a>
+								</li>
+							<!----><!---->
+								<li class="line-clamp-1">
+									<a class="display-block has-inner-focus padding-inline-xs padding-block-xxs border-radius font-size-sm" href="https://learn.microsoft.com/vi-vn/azure/">
+										Azure
+									</a>
+								</li>
+							<!----><!---->
+								<li class="line-clamp-1">
+									<a class="display-block has-inner-focus padding-inline-xs padding-block-xxs border-radius font-size-sm" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/">
+										Static Web Apps
+									</a>
+								</li>
+							<!---->
+				</ol>
+			</nav>
+			
+		<!----></div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs" style="display: block; white-space: nowrap; overflow: hidden;"><!---->
+			<nav>
+				<ol class="breadcrumbs">
+					<!---->
+								<li class="breadcrumbs-item" data-bread-crumbs-collapse-target="">
+									<a href="https://learn.microsoft.com/vi-vn/"><!---->Learn<!----></a>
+								</li>
+							<!----><!---->
+								<li class="breadcrumbs-item" data-bread-crumbs-collapse-target="">
+									<a href="https://learn.microsoft.com/vi-vn/azure/"><!---->Azure<!----></a>
+								</li>
+							<!----><!---->
+								<li class="breadcrumbs-item" data-bread-crumbs-collapse-target="" style="">
+									<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/" style=""><!---->Static Web Apps<!----></a>
+								</li>
+							<!---->
+				</ol>
+			</nav>
+		<!----></bread-crumbs>
+
+									<div id="article-header-page-actions" class="margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a id="lang-link-tablet" class="button button-primary button-clear button-sm display-none display-inline-flex-tablet" title="Đọc bằng tiếng Anh" data-bi-name="language-toggle" data-read-in-link="" href="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript" data-bi="{&quot;cN&quot;:&quot;language-toggle&quot;,&quot;value&quot;:&quot;off&quot;}">
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon="">
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text="">Đọc bằng tiếng Anh</span>
+										</a>
+
+											<button type="button" class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet" data-list-type="collection" data-bi-name="collection" title="Thêm Quickstart: Build your first static web app | Microsoft Learn vào bộ sưu tập" data-pressed="false">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Thêm</span>
+											</button>
+										
+
+											<a data-contenteditbtn="" class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet" aria-label="Chỉnh sửa" title="Chỉnh sửa tài liệu này" data-bi-name="edit" href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/static-web-apps/get-started-portal.md" data-original_content_git_url="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/static-web-apps/get-started-portal.md" data-original_content_git_url_template="{repo}/blob/{branch}/articles/static-web-apps/get-started-portal.md" data-pr_repo="" data-pr_branch="">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="Xem thêm hành động">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button data-page-action-item="overflow-mobile" type="button" class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet" data-bi-name="contents-expand" data-contents-button="" data-popover-close="">
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+															<span class="contents-expand-title">Mục lục</span>
+													</button>
+
+												<a id="lang-link-overflow" class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet" title="Đọc bằng tiếng Anh" data-bi-name="language-toggle" data-page-action-item="overflow-mobile" data-check-hidden="true" data-read-in-link="" href="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript" data-bi="{&quot;cN&quot;:&quot;language-toggle&quot;,&quot;value&quot;:&quot;off&quot;}">
+													<span class="icon" aria-hidden="true" data-read-in-link-icon="">
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text="">Đọc bằng tiếng Anh</span>
+												</a>
+
+													<button type="button" class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet" data-list-type="collection" data-bi-name="collection" title="Thêm Quickstart: Build your first static web app | Microsoft Learn vào bộ sưu tập" data-page-action-item="overflow-mobile" data-check-hidden="true" data-popover-close="" data-pressed="false">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Thêm</span>
+													</button>
+
+													<a data-contenteditbtn="" class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet" aria-label="Chỉnh sửa" title="Chỉnh sửa tài liệu này" data-bi-name="edit" href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/static-web-apps/get-started-portal.md" data-original_content_git_url="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/static-web-apps/get-started-portal.md" data-original_content_git_url_template="{repo}/blob/{branch}/articles/static-web-apps/get-started-portal.md" data-pr_repo="" data-pr_branch="">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Chỉnh sửa</span>
+													</a>
+
+													<button class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus" title="In" type="button" aria-label="In" data-bi-name="print" data-page-action-item="overflow-all" data-popover-close="" data-print-page="" data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>In</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none
+														border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript%26WT.mc_id%3Dtwitter&amp;text=Quickstart%3A%20Build%20your%20first%20static%20web%20app%20%7C%20Microsoft%20Learn&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript%26WT.mc_id%3Dtwitter">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript%26WT.mc_id%3Dlinkedin">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript%26WT.mc_id%3Dfacebook">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all" href="mailto:?subject=%5BB%C3%A0i%20vi%E1%BA%BFt%20%C4%91%C6%B0%E1%BB%A3c%20chia%20s%E1%BA%BB%5D%20Quickstart%3A%20Build%20your%20first%20static%20web%20app%20%7C%20Microsoft%20Learn&amp;body=Quickstart%3A%20Build%20your%20first%20static%20web%20app%20%7C%20Microsoft%20Learn%0A%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript%26WT.mc_id%3Demail">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button="" hidden="">
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+										<span class="contents-expand-title">Mục lục</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="quickstart-build-your-first-static-web-app">Quickstart: Build your first static web app</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="vi-vn" dir="ltr">
+													<li>
+Bài viết													</li>
+
+													<li class="visibility-hidden-visual-diff">
+														<time class="" data-article-date="" aria-label="Ngày xem lại bài viết" datetime="2023-02-27T18:08:00.000Z" data-article-date-source="calculated">28/02/2023</time>
+													</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="Xem tất cả người đóng góp" class="contributors-button link-button" data-bi-name="contributors" title="Xem tất cả người đóng góp">
+																	6 người đóng góp
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+	<button id="user-feedback-button" data-test-id="conceptual-feedback-button" class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button" data-user-feedback-button="">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Phản hồi</span>
+	</button>
+</div>
+									</div>
+		<form data-bi-name="zone-pivots" class="alert display-none-print" dir="ltr" lang="vi-vn">
+			
+			<fieldset class="field padding-none" aria-label="Select a code hosting platform">
+				<legend class="label margin-bottom-xxs">
+					Select a code hosting platform
+				</legend>
+
+				<div class="buttons buttons-addons">
+					
+					<label class="button ">
+						<span class="icon high-contrast-only is-hidden"><span aria-hidden="true" class="docon docon-location"></span></span>
+						<input class="visually-hidden" type="radio" name="devops-or-github" value="github">
+						<span>GitHub</span>
+					</label>
+
+					<label class="button button-primary button-filled is-selected">
+						<span class="icon high-contrast-only "><span aria-hidden="true" class="docon docon-location"></span></span>
+						<input class="visually-hidden" type="radio" name="devops-or-github" value="azure-devops" checked="">
+						<span>Azure DevOps</span>
+					</label>
+			</div></fieldset>
+		</form>
+
+									<div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+										<nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc" role="navigation" aria-label="Trong bài viết này"><!----> 
+		<h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->Trong bài viết này<!----></h2>
+		<ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite" aria-relevant="additions">
+			<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#prerequisites"><!---->Prerequisites<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#create-a-repository"><!---->Create a repository<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#create-a-static-web-app"><!---->Create a static web app<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#view-the-website"><!---->View the website<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#clean-up-resources"><!---->Clean up resources<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#next-steps"><!---->Next steps<!----></a>
+					</li>
+				<!---->
+		</ol>
+	 
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-xxs margin-left-xs" aria-controls="content-well-in-this-article-list" data-title="Hiện thêm 2" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Hiện thêm 2<!----></span>
+			
+		</button>
+	 <!----></nav>
+
+								<!-- <content> -->
+									<p>Azure Static Web Apps publishes a website to a production environment by building apps from an Azure DevOps or GitHub repository. In this quickstart, you deploy a web application to Azure Static Web apps using the Azure portal.</p>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#prerequisites" aria-label="Phần có tiêu đề: Prerequisites"></a><h2 id="prerequisites" class="heading-anchor">Prerequisites</h2></div>
+<div class="zone has-pivot" data-pivot="github">
+<ul>
+<li>If you don't have an Azure subscription, <a href="https://azure.microsoft.com/free" data-linktype="external">create a free trial account</a>.</li>
+<li><a href="https://github.com/" data-linktype="external">GitHub</a> account</li>
+</ul>
+</div>
+<div class="zone has-pivot" data-pivot="azure-devops">
+<ul>
+<li>If you don't have an Azure subscription, <a href="https://azure.microsoft.com/free" data-linktype="external">create a free trial account</a>.</li>
+<li><a href="https://azure.microsoft.com/services/devops" data-linktype="external">Azure DevOps</a> organization</li>
+</ul>
+</div>
+<div class="zone has-pivot" data-pivot="github">
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#create-a-repository" aria-label="Phần có tiêu đề: Create a repository"></a><h2 class="heading-anchor" data-id="create-a-repository">Create a repository</h2></div>
+<p>This article uses a GitHub template repository to make it easy for you to get started. The template features a starter app to deploy to Azure Static Web Apps.</p>
+<div class="tabGroup" data-bi-name="tab-group" data-id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_vanilla-javascript" role="tab" aria-controls="tabpanel_1_vanilla-javascript" data-tab="vanilla-javascript" tabindex="0" aria-selected="true" data-linktype="self-bookmark" data-bi-name="tab">No Framework</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_angular" role="tab" aria-controls="tabpanel_1_angular" data-tab="angular" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Angular</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_blazor" role="tab" aria-controls="tabpanel_1_blazor" data-tab="blazor" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Blazor</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_react" role="tab" aria-controls="tabpanel_1_react" data-tab="react" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">React</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_vue" role="tab" aria-controls="tabpanel_1_vue" data-tab="vue" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Vue</a>
+</li>
+</ul>
+<section role="tabpanel" data-tab="vanilla-javascript" data-id="tabpanel_1_vanilla-javascript">
+
+<ol>
+<li>Navigate to the following location to create a new repository:
+<ol>
+<li><a href="https://github.com/login?return_to=/staticwebdev/vanilla-basic/generate" data-linktype="external">https://github.com/staticwebdev/vanilla-basic/generate</a></li>
+</ol>
+</li>
+<li>Name your repository <strong>my-first-static-web-app</strong></li>
+</ol>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Lưu ý</p>
+<p>Azure Static Web Apps requires at least one HTML file to create a web app. The repository you create in this step includes a single <em>index.html</em> file.</p>
+</div>
+</section>
+<section role="tabpanel" data-tab="angular" aria-hidden="true" hidden="hidden" data-id="tabpanel_1_angular">
+
+<ol>
+<li>Navigate to the following location to create a new repository:
+<ol>
+<li><a href="https://github.com/login?return_to=%2Fstaticwebdev%2Fangular-basic%2Fgenerate" data-linktype="external">https://github.com/staticwebdev/angular-basic/generate</a></li>
+</ol>
+</li>
+<li>Name your repository <strong>my-first-static-web-app</strong></li>
+</ol>
+</section>
+<section role="tabpanel" data-tab="blazor" aria-hidden="true" hidden="hidden" data-id="tabpanel_1_blazor">
+
+<ol>
+<li>Navigate to the following location to create a new repository:
+<ol>
+<li><a href="https://github.com/login?return_to=%2Fstaticwebdev%2Fblazor-basic%2Fgenerate" data-linktype="external">https://github.com/staticwebdev/blazor-basic/generate</a></li>
+</ol>
+</li>
+<li>Name your repository <strong>my-first-static-web-app</strong></li>
+</ol>
+</section>
+<section role="tabpanel" data-tab="react" aria-hidden="true" hidden="hidden" data-id="tabpanel_1_react">
+
+<ol>
+<li>Navigate to the following location to create a new repository:
+<ol>
+<li><a href="https://github.com/login?return_to=%2Fstaticwebdev%2Freact-basic%2Fgenerate" data-linktype="external">https://github.com/staticwebdev/react-basic/generate</a></li>
+</ol>
+</li>
+<li>Name your repository <strong>my-first-static-web-app</strong></li>
+</ol>
+</section>
+<section role="tabpanel" data-tab="vue" aria-hidden="true" hidden="hidden" data-id="tabpanel_1_vue">
+
+<ol>
+<li>Navigate to the following location to create a new repository:
+<ol>
+<li><a href="https://github.com/login?return_to=%2Fstaticwebdev%2Fvue-basic%2Fgenerate" data-linktype="external">https://github.com/staticwebdev/vue-basic/generate</a></li>
+</ol>
+</li>
+<li>Name your repository <strong>my-first-static-web-app</strong></li>
+</ol>
+</section>
+</div>
+
+<p>Select <strong>Create repository from template</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="./index_files/create-template.png" alt="Create repository from template" data-linktype="relative-path">
+</span>
+</p>
+</div>
+<div class="zone has-pivot" data-pivot="azure-devops">
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#create-a-repository" aria-label="Phần có tiêu đề: Create a repository"></a><h2 id="create-a-repository" class="heading-anchor">Create a repository</h2></div>
+<p>This article uses an Azure DevOps repository to make it easy for you to get started. The repository features a starter app used to deploy using Azure Static Web Apps.</p>
+<ol>
+<li><p>Sign in to Azure DevOps.</p>
+</li>
+<li><p>Select <strong>New repository</strong>.</p>
+</li>
+<li><p>In the <em>Create new project</em> window, expand <strong>Advanced</strong> menu and make the following selections:</p>
+<div class="has-inner-focus"><table aria-label="Bảng 1" class="table table-sm">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td>Enter <strong>my-first-web-static-app</strong>.</td>
+</tr>
+<tr>
+<td>Visibility</td>
+<td>Select <strong>Private</strong>.</td>
+</tr>
+<tr>
+<td>Version control</td>
+<td>Select <strong>Git</strong>.</td>
+</tr>
+<tr>
+<td>Work item process</td>
+<td>Select the option that best suits your development methods.</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li><p>Select <strong>Create</strong>.</p>
+</li>
+<li><p>Select the <strong>Repos</strong> menu item.</p>
+</li>
+<li><p>Select the <strong>Files</strong> menu item.</p>
+</li>
+<li><p>Under the <em>Import repository</em> card, select <strong>Import</strong>.</p>
+</li>
+<li><p>Copy a repository URL for the framework of your choice, and paste it into the <em>Clone URL</em> box.</p>
+<div class="tabGroup" id="tabgroup_1" data-bi-name="tab-group">
+<ul role="tablist">
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_vanilla-javascript" role="tab" aria-controls="tabpanel_1_vanilla-javascript" data-tab="vanilla-javascript" tabindex="0" aria-selected="true" data-linktype="self-bookmark" data-bi-name="tab">No Framework</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_angular" role="tab" aria-controls="tabpanel_1_angular" data-tab="angular" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Angular</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_blazor" role="tab" aria-controls="tabpanel_1_blazor" data-tab="blazor" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Blazor</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_react" role="tab" aria-controls="tabpanel_1_react" data-tab="react" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">React</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_1_vue" role="tab" aria-controls="tabpanel_1_vue" data-tab="vue" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Vue</a>
+</li>
+</ul>
+<section id="tabpanel_1_vanilla-javascript" role="tabpanel" data-tab="vanilla-javascript">
+
+<p><a href="https://github.com/staticwebdev/vanilla-basic.git" data-linktype="external">https://github.com/staticwebdev/vanilla-basic.git</a></p>
+</section>
+<section id="tabpanel_1_angular" role="tabpanel" data-tab="angular" aria-hidden="true" hidden="hidden">
+
+<p><a href="https://github.com/staticwebdev/angular-basic.git" data-linktype="external">https://github.com/staticwebdev/angular-basic.git</a></p>
+</section>
+<section id="tabpanel_1_blazor" role="tabpanel" data-tab="blazor" aria-hidden="true" hidden="hidden">
+
+<p><a href="https://github.com/staticwebdev/blazor-basic.git" data-linktype="external">https://github.com/staticwebdev/blazor-basic.git</a></p>
+</section>
+<section id="tabpanel_1_react" role="tabpanel" data-tab="react" aria-hidden="true" hidden="hidden">
+
+<p><a href="https://github.com/staticwebdev/react-basic.git" data-linktype="external">https://github.com/staticwebdev/react-basic.git</a></p>
+</section>
+<section id="tabpanel_1_vue" role="tabpanel" data-tab="vue" aria-hidden="true" hidden="hidden">
+
+<p><a href="https://github.com/staticwebdev/vue-basic.git" data-linktype="external">https://github.com/staticwebdev/vue-basic.git</a></p>
+</section>
+</div>
+</li>
+<li><p>Select <strong>Import</strong> and wait for the import process to complete.</p>
+</li>
+</ol>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#create-a-static-web-app" aria-label="Phần có tiêu đề: Create a static web app"></a><h2 id="create-a-static-web-app" class="heading-anchor">Create a static web app</h2></div>
+<p>Now that the repository is created, you can create a static web app from the Azure portal.</p>
+<ol>
+<li>Go to the <a href="https://portal.azure.com/" data-linktype="external">Azure portal</a>.</li>
+<li>Select <strong>Create a Resource</strong>.</li>
+<li>Search for <strong>Static Web Apps</strong>.</li>
+<li>Select <strong>Static Web Apps</strong>.</li>
+<li>Select <strong>Create</strong>.</li>
+</ol>
+<div class="zone has-pivot" data-pivot="github">
+<p>In the <em>Basics</em> section, begin by configuring your new app and linking it to a GitHub repository.</p>
+<p><span class="mx-imgBorder">
+<img src="./index_files/quickstart-portal-basics.png" alt="Basics section" data-linktype="relative-path">
+</span>
+</p>
+<div class="has-inner-focus"><table aria-label="Bảng 2" class="table table-sm">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscription</td>
+<td>Select your Azure subscription.</td>
+</tr>
+<tr>
+<td>Resource Group</td>
+<td>Select the <strong>Create new</strong> link, and enter <strong>static-web-apps-test</strong> in the textbox.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Enter <strong>my-first-static-web-app</strong> in the textbox.</td>
+</tr>
+<tr>
+<td>Plan type</td>
+<td>Select <strong>Free</strong>.</td>
+</tr>
+<tr>
+<td>Azure Functions and staging details</td>
+<td>Select a region closest to you.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Select <strong>GitHub</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Select <strong>Sign-in with GitHub</strong> and authenticate with GitHub.</p>
+<p>After you sign in with GitHub, enter the repository information.</p>
+<div class="has-inner-focus"><table aria-label="Bảng 3" class="table table-sm">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organization</td>
+<td>Select your organization.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Select <strong>my-first-web-static-app</strong>.</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Select <strong>&lt;branch_name&gt;</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="mx-imgBorder">
+<img src="./index_files/quickstart-portal-source-control.png" alt="Repository details" data-linktype="relative-path">
+</span>
+</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Lưu ý</p>
+<p>If you don't see any repositories:</p>
+<ul>
+<li>You may need to authorize Azure Static Web Apps in GitHub. Browse to your GitHub repository and go to <strong>Settings &gt; Applications &gt; Authorized OAuth Apps</strong>, select <strong>Azure Static Web Apps</strong>, and then select <strong>Grant</strong>.</li>
+<li>You may need to authorize Azure Static Web Apps in your Azure DevOps organization. You must be an owner of the organization to grant the permissions. Request third-party application access via OAuth. For more information, see <a href="https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/oauth" data-linktype="absolute-path">Authorize access to REST APIs with OAuth 2.0</a>.</li>
+</ul>
+</div>
+</div>
+<div class="zone has-pivot" data-pivot="azure-devops">
+<p>In the <em>Basics</em> section, begin by configuring your new app and linking it to an Azure DevOps repository.</p>
+<div class="has-inner-focus"><table aria-label="Bảng 4" class="table table-sm">
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscription</td>
+<td>Select your Azure subscription.</td>
+</tr>
+<tr>
+<td>Resource Group</td>
+<td>Select the <strong>Create new</strong> link, and enter <strong>static-web-apps-test</strong> in the textbox.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Enter <strong>my-first-static-web-app</strong> in the textbox.</td>
+</tr>
+<tr>
+<td>Plan type</td>
+<td>Select <strong>Free</strong>.</td>
+</tr>
+<tr>
+<td>Azure Functions and staging details</td>
+<td>Select a region closest to you.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Select <strong>DevOps</strong>.</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>Select your organization.</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Select your project.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Select <strong>my-first-web-static-app</strong>.</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Select <strong>&lt;branch_name&gt;</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Lưu ý</p>
+<p>Make sure the branch you are using is not protected, and that you have sufficient permissions to issue a <code>push</code> command. To verify, browse to your DevOps repository and go to <strong>Repos</strong> -&gt; <strong>Branches</strong> and select <strong>More options</strong>. Next, select your branch, and then <strong>Branch policies</strong> to ensure required policies aren't enabled.</p>
+</div>
+</div>
+<p>In the <em>Build Details</em> section, add configuration details specific to your preferred front-end framework.</p>
+<div class="tabGroup" id="tabgroup_2" data-bi-name="tab-group">
+<ul role="tablist">
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_2_vanilla-javascript" role="tab" aria-controls="tabpanel_2_vanilla-javascript" data-tab="vanilla-javascript" tabindex="0" aria-selected="true" data-linktype="self-bookmark" data-bi-name="tab">No Framework</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_2_angular" role="tab" aria-controls="tabpanel_2_angular" data-tab="angular" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Angular</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_2_blazor" role="tab" aria-controls="tabpanel_2_blazor" data-tab="blazor" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Blazor</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_2_react" role="tab" aria-controls="tabpanel_2_react" data-tab="react" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">React</a>
+</li>
+<li role="presentation">
+<a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#tabpanel_2_vue" role="tab" aria-controls="tabpanel_2_vue" data-tab="vue" tabindex="-1" data-linktype="self-bookmark" data-bi-name="tab" aria-selected="false">Vue</a>
+</li>
+</ul>
+<section id="tabpanel_2_vanilla-javascript" role="tabpanel" data-tab="vanilla-javascript">
+
+<ol>
+<li>Select <strong>Custom</strong> from the <em>Build Presets</em> dropdown.</li>
+<li>Type <strong>./src</strong> in the <em>App location</em> box.</li>
+<li>Leave the <em>Api location</em> box empty.</li>
+<li>Type <strong>./src</strong> <em>App artifact location</em> box.</li>
+</ol>
+</section>
+<section id="tabpanel_2_angular" role="tabpanel" data-tab="angular" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Select <strong>Angular</strong> from the <em>Build Presets</em> dropdown.</li>
+<li>Keep the default value in the <em>App location</em> box.</li>
+<li>Leave the <em>Api location</em> box empty.</li>
+<li>Type <strong>dist/angular-basic</strong> in the <em>App artifact location</em> box.</li>
+</ol>
+</section>
+<section id="tabpanel_2_blazor" role="tabpanel" data-tab="blazor" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Select <strong>Blazor</strong> from the <em>Build Presets</em> dropdown.</li>
+<li>Keep the default value of <strong>Client</strong> in the <em>App location</em> box.</li>
+<li>Leave the <em>Api location</em> box empty.</li>
+<li>Keep the default value of <strong>wwwroot</strong> in the <em>App artifact location</em> box.</li>
+</ol>
+</section>
+<section id="tabpanel_2_react" role="tabpanel" data-tab="react" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Select <strong>React</strong> from the <em>Build Presets</em> dropdown.</li>
+<li>Keep the default value in the <em>App location</em> box.</li>
+<li>Leave the <em>Api location</em> box empty.</li>
+<li>Type <strong>build</strong> in the <em>App artifact location</em> box.</li>
+</ol>
+</section>
+<section id="tabpanel_2_vue" role="tabpanel" data-tab="vue" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Select <strong>Vue.js</strong> from the <em>Build Presets</em> dropdown.</li>
+<li>Keep the default value in the <em>App location</em> box.</li>
+<li>Leave the <em>Api location</em> box empty.</li>
+<li>Keep the default value in the <em>App artifact location</em> box.</li>
+</ol>
+</section>
+</div>
+
+<p>Select <strong>Review + create</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="./index_files/review-create.png" alt="Review and create your Azure Static Web Apps instance." data-linktype="relative-path">
+</span>
+</p>
+<div class="zone has-pivot" data-pivot="github">
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Lưu ý</p>
+<p>You can edit the <a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/build-configuration" data-linktype="relative-path">workflow file</a> to change these values after you create the app.</p>
+</div>
+</div>
+<p>Select <strong>Create</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="./index_files/create-button.png" alt="Create your Azure Static Web Apps instance." data-linktype="relative-path">
+</span>
+</p>
+<p>Select <strong>Go to resource</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="./index_files/resource-button.png" alt="Proceed to go to the newly created resource." data-linktype="relative-path">
+</span>
+</p>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#view-the-website" aria-label="Phần có tiêu đề: View the website"></a><h2 id="view-the-website" class="heading-anchor">View the website</h2></div>
+<p>There are two aspects to deploying a static app. The first creates the underlying Azure resources that make up your app. The second is a workflow that builds and publishes your application.</p>
+<p>Before you can go to your new static site, the deployment build must first finish running.</p>
+<p>The Static Web Apps <em>Overview</em> window displays a series of links that help you interact with your web app.</p>
+<div class="zone has-pivot" data-pivot="github">
+<p><span class="mx-imgBorder">
+<img src="./index_files/overview-window.png" alt="The Azure Static Web Apps overview window." data-linktype="relative-path">
+</span>
+</p>
+<ol>
+<li><p>Selecting on the banner that says, <em>Select here to check the status of your GitHub Actions runs</em> takes you to the GitHub Actions running against your repository. Once you verify the deployment job is complete, then you can go to your website via the generated URL.</p>
+</li>
+<li><p>Once GitHub Actions workflow is complete, you can select the <em>URL</em> link to open the website in new tab.</p>
+</li>
+</ol>
+</div>
+<div class="zone has-pivot" data-pivot="azure-devops">
+<p>Once the  workflow is complete, you can select the <em>URL</em> link to open the website in new tab.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#clean-up-resources" aria-label="Phần có tiêu đề: Clean up resources"></a><h2 id="clean-up-resources" class="heading-anchor">Clean up resources</h2></div>
+<p>If you're not going to continue to use this application, you can delete the Azure Static Web Apps instance through the following steps:</p>
+<ol>
+<li>Open the <a href="https://portal.azure.com/" data-linktype="external">Azure portal</a>.</li>
+<li>Search for <strong>my-first-web-static-app</strong> from the top search bar.</li>
+<li>Select the app name.</li>
+<li>Select <strong>Delete</strong>.</li>
+<li>Select <strong>Yes</strong> to confirm the delete action (this action may take a few moments to complete).</li>
+</ol>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/get-started-portal?pivots=azure-devops&amp;tabs=vanilla-javascript#next-steps" aria-label="Phần có tiêu đề: Next steps"></a><h2 id="next-steps" class="heading-anchor">Next steps</h2></div>
+<div class="nextstepaction">
+<p><a href="https://learn.microsoft.com/vi-vn/azure/static-web-apps/add-api" data-linktype="relative-path" class="button button-primary button-filled has-text-wrap">Add an API</a></p>
+</div>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+<section class="feedback-section position-relative" data-bi-name="feedback-section">
+    <h2 id="feedback" class="title is-3 margin-top-sm">Phản hồi</h2>
+
+    <div class="alert choose-feedback-type padding-bottom-sm">
+        <p id="send-feedback-about">Gửi và xem ý kiến phản hồi dành cho</p>
+
+        <div class="choose-feedback-buttons buttons margin-top-xs">
+                <a class="button has-external-link-indicator feedback-type-product" aria-label="Gửi phản hồi về sản phẩm này" href="https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4" data-bi-name="product-feedback">
+                    <span>Sản phẩm này</span>
+                </a>
+			<a class="button feedback-type-product github-link" aria-label="Gửi phản hồi về trang này" data-bi-name="create-issue-on-github" href="https://github.com/MicrosoftDocs/azure-docs/issues/new?title=&amp;body=%0A%0A%5BNh%C3%A2%CC%A3p%20pha%CC%89n%20h%C3%B4%CC%80i%20va%CC%80o%20%C4%91%C3%A2y%5D%0A%0A%0A---%0A%23%23%23%23%20Chi%20ti%E1%BA%BFt%20t%C3%A0i%20li%E1%BB%87u%0A%0A%E2%9A%A0%20*Kh%C3%B4ng%20ch%E1%BB%89nh%20s%E1%BB%ADa%20ph%E1%BA%A7n%20n%C3%A0y.%20%C4%90i%E1%BB%81u%20n%C3%A0y%20l%C3%A0%20b%E1%BA%AFt%20bu%E1%BB%99c%20cho%20learn.microsoft.com%20%E2%9E%9F%20V%E1%BA%A5n%20%C4%91%E1%BB%81%20khi%20li%C3%AAn%20k%E1%BA%BFt%20GitHub.*%0A%0A*%20ID%3A%2063230b97-2269-3fed-7fca-882bb380c5f6%0A*%20Version%20Independent%20ID%3A%20feb2708e-5cea-4ad8-eaaa-f3061e18c11a%0A*%20Content%3A%20%5BQuickstart%3A%20Build%20your%20first%20static%20web%20app%5D(https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript)%0A*%20Content%20Source%3A%20%5Barticles%2Fstatic-web-apps%2Fget-started-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fazure-docs%2Fblob%2Fmain%2Farticles%2Fstatic-web-apps%2Fget-started-portal.md)%0A*%20Service%3A%20**static-web-apps**%0A*%20GitHub%20Login%3A%20%40craigshoemaker%0A*%20Microsoft%20Alias%3A%20**cshoe**">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-brand-github"></span>
+				</span>
+				<span>Trang này</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container display-flex justify-content-flex-end margin-block-xxs">
+        <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/azure-docs/issues?utf8=%E2%9C%93&amp;q=%22feb2708e-5cea-4ad8-eaaa-f3061e18c11a%22&amp;in=body">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>Xem tất cả ý kiến phản hồi về trang</span>
+        </a>
+    </div>
+</section>
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<div id="ms--additional-resources-mobile" role="complementary" aria-label="Tài nguyên bổ sung" class="display-none-desktop display-none-print">
+								<hr class="hr">
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3">Tài nguyên bổ sung</h2>
+								<section id="right-rail-recommendations-mobile" data-bi-name="recommendations"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-book-art64"></span>
+			</span>
+			Tài liệu
+		</p>
+	
+			<div class="margin-top-xs ">
+				
+		<ul aria-live="polite" aria-relevant="additions" id="right-rail-recommendations-list-0">
+			<!---->
+					<li class="padding-none margin-top-xs margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?source=recommendations" data-bi-name="right-rail-recommendation-item-0">
+				Quickstart: Building your first static site with the Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn to deploy a static site to Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/front-end-frameworks?source=recommendations" data-bi-name="right-rail-recommendation-item-1">
+				Configure front-end frameworks with Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Settings for popular front-end frameworks needed for Azure Static Web Apps
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain?source=recommendations" data-bi-name="right-rail-recommendation-item-2">
+				Custom domains with Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Using a custom domain with Azure Static Web Apps
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-cli?source=recommendations" data-bi-name="right-rail-recommendation-item-3">
+				Quickstart: Building your first static site with the Azure Static Web Apps using the CLI
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn to deploy a static site to Azure Static Web Apps with the Azure CLI.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/overview?source=recommendations" data-bi-name="right-rail-recommendation-item-4">
+				What is Azure Static Web Apps?
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			The key features and functionality of Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/application-settings?source=recommendations" data-bi-name="right-rail-recommendation-item-5">
+				Configure application settings for Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn how to configure application settings for Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/configuration?source=recommendations" data-bi-name="right-rail-recommendation-item-6">
+				Configure Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn how to configure routes and enforce security rules and global settings for Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/create-static-web-app?source=recommendations" data-bi-name="right-rail-recommendation-item-7">
+				Build Static Web App on Azure with JavaScript - Azure
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Build a JAMstack app (JavaScript, APIs, and Markup) on Azure
+		</p>
+	
+					</li>
+				<!---->
+		</ul>
+	
+			</div>
+			<!---->
+				
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-sm" aria-controls="right-rail-recommendations-list-0" data-title="Hiện thêm 5" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Hiện thêm 5<!----></span>
+			
+		</button>
+	
+		  <!---->
+		</article>
+	<!----></section>
+								<section id="right-rail-training-mobile" data-bi-name="learning-resources-card"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-cube-cone-ball-shapes"></span>
+			</span>
+			Đào tạo
+		</p>
+	
+			<div class="margin-top-xs position-relative">
+				<!---->
+		<div class="position-relative margin-top-xs">
+			
+		
+				<p class="has-line-height-reset color-text-subtle font-size-xs font-weight-semibold">
+					Lộ trình học tập
+				</p>
+		  
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/training/paths/azure-static-web-apps/?source=recommendations">
+				Azure Static Web Apps - Training
+			</a>
+		</p>
+	
+			
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Azure Static Web Apps is a modern web app service that offers streamlined full-stack development from source code to global high availability.
+		</p>
+	
+		</div>
+	<!----><!---->
+			</div>
+			
+		</article>
+	<!----></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden=""></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden=""></section>
+							</div>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link button button-sm button-clear flex-shrink-0" href="https://learn.microsoft.com/vi-vn/locale?target=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript" data-bi-name="select-locale" aria-label="Bộ chọn ngôn ngữ nội dung. Hiện được đặt là Tiếng Việt.">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text">Tiếng Việt</span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu-interactive" aria-expanded="false" title="Chủ đề" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Chủ đề</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="light" aria-pressed="false">
+					<span class="theme-light margin-right-xxs">
+						<span class="theme-selector-icon css-variable-support border display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Sáng					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start is-selected" data-theme-to="dark" aria-pressed="true">
+					<span class="theme-dark margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Tối					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Độ tương phản cao					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/previous-versions/" data-bi-name="archivelink">Các phiên bản trước</a></li>
+				<li><a data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/contribute/" data-bi-name="contributorGuide">Đóng góp</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Quyền riêng tư</a></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/legal/termsofuse" data-bi-name="termsofuse">Điều khoản sử dụng</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Thương hiệu</a></li>
+		<li>© Microsoft 2023</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div id="ms--additional-resources" class="right-container column is-4-desktop display-none display-block-desktop" data-bi-name="pageactions" role="complementary" aria-label="Tài nguyên bổ sung">
+							<div id="affixed-right-container" class="margin-top-sm-tablet position-sticky" data-bi-name="right-column" style="top: 36px; bottom: 163.594px;">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md">Tài nguyên bổ sung</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden=""></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-cube-cone-ball-shapes"></span>
+			</span>
+			Đào tạo
+		</p>
+	
+			<div class="margin-top-xs position-relative">
+				<!---->
+		<div class="position-relative margin-top-xs">
+			
+		
+				<p class="has-line-height-reset color-text-subtle font-size-xs font-weight-semibold">
+					Lộ trình học tập
+				</p>
+		  
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/training/paths/azure-static-web-apps/?source=recommendations">
+				Azure Static Web Apps - Training
+			</a>
+		</p>
+	
+			
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Azure Static Web Apps is a modern web app service that offers streamlined full-stack development from source code to global high availability.
+		</p>
+	
+		</div>
+	<!----><!---->
+			</div>
+			
+		</article>
+	<!----></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-book-art64"></span>
+			</span>
+			Tài liệu
+		</p>
+	
+			<div class="margin-top-xs ">
+				
+		<ul aria-live="polite" aria-relevant="additions" id="right-rail-recommendations-list-1">
+			<!---->
+					<li class="padding-none margin-top-xs margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?source=recommendations" data-bi-name="right-rail-recommendation-item-0">
+				Quickstart: Building your first static site with the Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn to deploy a static site to Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/front-end-frameworks?source=recommendations" data-bi-name="right-rail-recommendation-item-1">
+				Configure front-end frameworks with Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Settings for popular front-end frameworks needed for Azure Static Web Apps
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain?source=recommendations" data-bi-name="right-rail-recommendation-item-2">
+				Custom domains with Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Using a custom domain with Azure Static Web Apps
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-cli?source=recommendations" data-bi-name="right-rail-recommendation-item-3">
+				Quickstart: Building your first static site with the Azure Static Web Apps using the CLI
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn to deploy a static site to Azure Static Web Apps with the Azure CLI.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/overview?source=recommendations" data-bi-name="right-rail-recommendation-item-4">
+				What is Azure Static Web Apps?
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			The key features and functionality of Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/application-settings?source=recommendations" data-bi-name="right-rail-recommendation-item-5">
+				Configure application settings for Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn how to configure application settings for Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/static-web-apps/configuration?source=recommendations" data-bi-name="right-rail-recommendation-item-6">
+				Configure Azure Static Web Apps
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Learn how to configure routes and enforce security rules and global settings for Azure Static Web Apps.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						
+		
+		<p class="line-clamp-3">
+			<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/create-static-web-app?source=recommendations" data-bi-name="right-rail-recommendation-item-7">
+				Build Static Web App on Azure with JavaScript - Azure
+			</a>
+		</p>
+	
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Build a JAMstack app (JavaScript, APIs, and Markup) on Azure
+		</p>
+	
+					</li>
+				<!---->
+		</ul>
+	
+			</div>
+			<!---->
+				
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-sm" aria-controls="right-rail-recommendations-list-1" data-title="Hiện thêm 5" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Hiện thêm 5<!----></span>
+			
+		</button>
+	
+		  <!---->
+		</article>
+	<!----></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Trong bài viết này">
+									<h3>Trong bài viết này</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden=""></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link button button-sm button-clear flex-shrink-0" href="https://learn.microsoft.com/vi-vn/locale?target=https%3A%2F%2Flearn.microsoft.com%2Fvi-vn%2Fazure%2Fstatic-web-apps%2Fget-started-portal%3Fpivots%3Dazure-devops%26tabs%3Dvanilla-javascript" data-bi-name="select-locale" aria-label="Bộ chọn ngôn ngữ nội dung. Hiện được đặt là Tiếng Việt.">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text">Tiếng Việt</span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu" aria-expanded="false" title="Chủ đề" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Chủ đề</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="light" aria-pressed="false">
+					<span class="theme-light margin-right-xxs">
+						<span class="theme-selector-icon css-variable-support border display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Sáng					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start is-selected" data-theme-to="dark" aria-pressed="true">
+					<span class="theme-dark margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Tối					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Độ tương phản cao					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/previous-versions/" data-bi-name="archivelink">Các phiên bản trước</a></li>
+				<li><a data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/contribute/" data-bi-name="contributorGuide">Đóng góp</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Quyền riêng tư</a></li>
+				<li><a data-mscc-ic="false" href="https://learn.microsoft.com/vi-vn/legal/termsofuse" data-bi-name="termsofuse">Điều khoản sử dụng</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Thương hiệu</a></li>
+		<li>© Microsoft 2023</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Pa nen hành động" class="action-panel has-default-focus" tabindex="-1"></div>
+
+
+<script src="./index_files/at.js.tải xuống" async="" defer="" integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu" crossorigin="anonymous"></script><div id="naptha_container0932014_0707"></div></body></html>
